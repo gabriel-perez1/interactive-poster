@@ -7,4 +7,4 @@ when the mouse moves to the right - rotate clockwise
 
 ## Link 
 
-[Interactive Poster](https://gabriel-perez1.github.io/interactive-brush/)
+[Interactive Poster](https://gabriel-perez1.github.io/interactive-poster/)
