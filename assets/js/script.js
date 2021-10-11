@@ -1,7 +1,7 @@
 let gap = 10;
 let circNum = 40;
 let circSize = 20;
-let angle;
+let angle = 90;
 //initial canvas
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -21,13 +21,13 @@ function draw(){
   push(); // starts and saves current drawing and transformation
   translate(width/2, height/2); //sets origin of circle
   rotate(angle);
-  angle = map(mouseX, 0, width, -90, 90);
+  angle = angle + map(mouseX, 0, width, -0.01, 0.01);
   noFill();
   stroke('white');
   strokeWeight(1);
   //for loop: 1. where to start, 2. where to end, 3. increment
   for(let i=0; i < circNum; i++){
-    arc(0, 0, circSize + gap * i, circSize + gap * i, 45, 360 - i); //x and y position is zero bc it's at the center of translate
+    arc(0, 0, circSize + gap * i, circSize + gap * i, angle * i, 360 - angle/2); //x and y position is zero bc it's at the center of translate
   }
   pop();
 }
